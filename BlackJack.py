@@ -194,15 +194,15 @@ while game_on.lower() == 'yes':
         print('\nRESULT: ', end=" ")
         if human_player.hand_sum() > computer_player.hand_sum() or computer_player.hand_sum() > 21:
             print('You win!')
-            human_player.balance = human_player.balance + 2*bet
+            human_player.balance = human_player.balance + bet
         elif human_player.hand_sum() < computer_player.hand_sum():
             print('You lose!')
-            human_player.balance = human_player.balance - 2*bet
+            human_player.balance = human_player.balance - bet
         elif human_player.hand_sum() == computer_player.hand_sum():
             print('Draw!')
             human_player.balance = human_player.balance + bet
     else:
-        human_player.balance = human_player.balance - (2*bet)
+        human_player.balance = human_player.balance - bet
       
     print("Balance left: " + str(human_player.balance))
     if human_player.balance <= 0:
